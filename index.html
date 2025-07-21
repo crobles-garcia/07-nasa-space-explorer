@@ -4,7 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>NASA Space Explorer</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="container">
@@ -14,11 +15,17 @@
     </header>
 
     <div class="filters">
-      <input type="date" id="startDate" />
-      <input type="date" id="endDate" />
+      <input type="date" id="startDate" value="2023-01-01" />
+      <input type="date" id="endDate" value="2023-01-05" />
       <button>Get Space Images</button>
     </div>
 
+    <!-- ✅ Loading message (placed outside gallery) -->
+    <p id="loadingMessage" class="hidden">🔄 Loading images from space...</p>
+
+    <div id="funFact" class="fun-fact-box hidden"></div>
+    
+    <!-- ✅ Gallery section -->
     <div id="gallery" class="gallery">
       <div class="placeholder">
         <div class="placeholder-icon">🔭</div>
@@ -27,7 +34,9 @@
     </div>
   </div>
 
+  <!-- Scripts -->
   <script src="js/dateRange.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
+<!-- This file is part of the NASA Space Explorer project. -->
